@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,25 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>This is output</h1>
-		
-	<p> The value of 2 * 2 = <%= 2 * 2 %></p>
-	<p> The value of 6 > 8 = <%= 6 > 8 %></p>
+	<h1>Student: ${student.name }</h1>
 	
-	<%
-		for (int i = 0; i < 10; i++) {
-			out.println(i + " x " + i + " = " + i * i);
-		}
-	%>
-	
-	<%!
-		int calLength(String str) {
-			return str.length();
-		}
-	%>
-	
-	<p>
-		The length of the string is <%= calLength("Hello") %>
-	</p>
+	<c:out value="Hello"></c:out>
 </body>
 </html>
